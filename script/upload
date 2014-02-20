@@ -81,7 +81,6 @@ def upload(target_arch):
     '--key_prefix', 'libchromiumcontent/{0}/{1}/{2}'.format(PLATFORM_KEY, arch,
                                                             commit),
     '--grant', 'public-read',
-    '--multipart'
   ] + glob.glob('libchromiumcontent*.zip')
 
   subprocess.check_call(args)
