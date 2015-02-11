@@ -44,6 +44,7 @@ BINARIES = {
         'chromedriver',
         'ffmpegsumo.so',
         'libchromiumcontent.dylib',
+        'libchromiumextensions.a',
         'libtest_support_chromiumcontent.a',
     ],
     'linux': [
@@ -115,10 +116,21 @@ INCLUDE_DIRS = [
     'cc',
     'chrome/browser/ui/libgtk2ui',
     'components/os_crypt',
+    'components/keyed_service',
+    'components/url_matcher',
+    'components/pref_registry',
+    'components/user_prefs',
+    'components/web_modal',
+    'components/storage_monitor',
+    'sync',
     'content/browser',
     'content/common',
     'content/public',
     'content/renderer',
+    'extensions/common',
+    'extensions/renderer',
+    'extensions/browser',
+    'extensions/utility',
     'crypto',
     'ipc',
     'gin',
@@ -150,6 +162,7 @@ INCLUDE_DIRS = [
     'win32': [],
 }[TARGET_PLATFORM]
 GENERATED_INCLUDE_DIRS = [
+    'extensions',
     'mojo',
     'ui',
 ]
