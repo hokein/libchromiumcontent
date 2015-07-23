@@ -2,7 +2,7 @@ diff --git a/net/url_request/url_request_job.h b/net/url_request/url_request_job
 index a105d79..36fa11d 100644
 --- a/net/url_request/url_request_job.h
 +++ b/net/url_request/url_request_job.h
-@@ -287,6 +287,7 @@ class NET_EXPORT URLRequestJob
+@@ -293,6 +293,7 @@ class NET_EXPORT URLRequestJob
    void OnCallToDelegate();
    void OnCallToDelegateComplete();
  

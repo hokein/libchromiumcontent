@@ -2,7 +2,7 @@ diff --git a/content/browser/web_contents/web_contents_impl.cc b/content/browser
 index f831fba..a59b5b0 100644
 --- a/content/browser/web_contents/web_contents_impl.cc
 +++ b/content/browser/web_contents/web_contents_impl.cc
-@@ -4114,6 +4114,7 @@ void WebContentsImpl::RendererUnresponsive(RenderViewHost* render_view_host) {
+@@ -3992,6 +3992,7 @@ void WebContentsImpl::RendererUnresponsive(RenderViewHost* render_view_host) {
  
    if (rfhi->IsWaitingForBeforeUnloadACK() ||
        rfhi->IsWaitingForUnloadACK()) {
@@ -10,7 +10,7 @@ index f831fba..a59b5b0 100644
      // Hang occurred while firing the beforeunload/unload handler.
      // Pretend the handler fired so tab closing continues as if it had.
      rvhi->set_sudden_termination_allowed(true);
-@@ -4133,6 +4134,7 @@ void WebContentsImpl::RendererUnresponsive(RenderViewHost* render_view_host) {
+@@ -4011,6 +4012,7 @@ void WebContentsImpl::RendererUnresponsive(RenderViewHost* render_view_host) {
      }
      if (close)
        Close(rvhi);

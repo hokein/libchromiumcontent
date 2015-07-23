@@ -2,7 +2,7 @@ diff --git a/Source/core/css/ComputedStyleCSSValueMapping.cpp b/Source/core/css/
 index c0590662..651678d 100644
 --- a/Source/core/css/ComputedStyleCSSValueMapping.cpp
 +++ b/Source/core/css/ComputedStyleCSSValueMapping.cpp
-@@ -514,7 +514,7 @@ static PassRefPtrWillBeRawPtr<CSSValueList> valueForFontFamily(const ComputedSty
+@@ -519,7 +519,7 @@ static PassRefPtrWillBeRawPtr<CSSValueList> valueForFontFamily(const ComputedSty
  
  static PassRefPtrWillBeRawPtr<CSSPrimitiveValue> valueForFontSize(const ComputedStyle& style)
  {
@@ -35,7 +35,7 @@ diff --git a/Source/platform/RuntimeEnabledFeatures.in b/Source/platform/Runtime
 index 5f3c617..b85115f 100644
 --- a/Source/platform/RuntimeEnabledFeatures.in
 +++ b/Source/platform/RuntimeEnabledFeatures.in
-@@ -148,6 +148,7 @@ StaleWhileRevalidateCacheControl
+@@ -145,6 +145,7 @@ StaleWhileRevalidateCacheControl
  // be shipped would be enabled. Instead, remove the flag from the shipping
  // interface.
  ExperimentalStream status=experimental
@@ -155,7 +155,7 @@ index 9d2b413..c70ec63 100644
      RuntimeEnabledFeatures::setWebAnimationsAPIEnabled(enable);
  }
  
-@@ -153,6 +154,11 @@ void WebRuntimeFeatures::enableMediaPlayer(bool enable)
+@@ -148,6 +149,11 @@ void WebRuntimeFeatures::enableMediaPlayer(bool enable)
      RuntimeEnabledFeatures::setMediaEnabled(enable);
  }
  

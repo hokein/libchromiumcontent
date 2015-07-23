@@ -2,12 +2,11 @@ diff --git a/ui/accelerated_widget_mac/io_surface_layer.mm b/ui/accelerated_widg
 index 1f4da95..8540e91 100644
 --- a/ui/accelerated_widget_mac/io_surface_layer.mm
 +++ b/ui/accelerated_widget_mac/io_surface_layer.mm
-@@ -182,6 +182,7 @@ void IOSurfaceLayerHelper::EndPumpingFrames() {
+@@ -184,5 +184,6 @@ void IOSurfaceLayerHelper::EndPumpingFrames() {
        return nil;
      }
  
 +    if (!ui::GpuSwitchingManager::UseTransparent())
-     [self setBackgroundColor:CGColorGetConstantColor(kCGColorWhite)];
      [self setAnchorPoint:CGPointMake(0, 0)];
      // Setting contents gravity is necessary to prevent the layer from being
 diff --git a/ui/gl/gpu_switching_manager.cc b/ui/gl/gpu_switching_manager.cc
