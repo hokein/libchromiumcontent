@@ -40,7 +40,6 @@
         '<(DEPTH)/ppapi/ppapi_internal.gyp:ppapi_proxy',
         '<(DEPTH)/ppapi/ppapi_internal.gyp:ppapi_ipc',
         '<(DEPTH)/ppapi/ppapi_internal.gyp:ppapi_shared',
-        '<(DEPTH)/third_party/google_toolbox_for_mac/google_toolbox_for_mac.gyp:google_toolbox_for_mac',
         '<(DEPTH)/third_party/libyuv/libyuv.gyp:libyuv',
         '<(DEPTH)/third_party/webrtc/modules/modules.gyp:desktop_capture',
       ],
@@ -51,6 +50,11 @@
         ['OS=="win"', {
           'dependencies': [
             '<(DEPTH)/pdf/pdf.gyp:pdf',
+          ],
+        }],
+        ['OS=="mac"', {
+          'dependencies': [
+            '<(DEPTH)/third_party/google_toolbox_for_mac/google_toolbox_for_mac.gyp:google_toolbox_for_mac',
           ],
         }],
       ],
@@ -90,6 +94,11 @@
             '<(DEPTH)/ui/views/controls/webview/webview.gyp:webview',
             '<(DEPTH)/ui/views/views.gyp:views',
             '<(DEPTH)/ui/wm/wm.gyp:wm',
+            '<(DEPTH)/components/components.gyp:constrained_window',
+            '<(DEPTH)/components/components.gyp:web_modal',
+            '<(DEPTH)/components/components.gyp:guest_view_browser',
+            '<(DEPTH)/components/components.gyp:guest_view_common',
+            '<(DEPTH)/components/components.gyp:ui_zoom',
           ],
           'conditions': [
             ['OS=="linux"', {

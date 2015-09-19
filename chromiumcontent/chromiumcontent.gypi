@@ -122,7 +122,8 @@
           },
         },
       }],
-      ['_target_name in ["gtk2ui", "devtools_http_handler", "devtools_discovery", "http_server"]', {
+
+      ['_target_name in ["gtk2ui", "devtools_http_handler", "devtools_discovery", "http_server", "desktop_capture", "desktop_capture_differ_sse2", "webrtc_common", "system_wrappers", "rtc_base", "rtc_base_approved", "constrained_window", "web_modal", "guest_view_browser", "guest_view_common", "ui_zoom", "tracing"]', {
         'type': 'static_library',
         'standalone_static_library': 1,
         'cflags': [
