@@ -40,6 +40,9 @@
         '<(DEPTH)/ppapi/ppapi_internal.gyp:ppapi_proxy',
         '<(DEPTH)/ppapi/ppapi_internal.gyp:ppapi_ipc',
         '<(DEPTH)/ppapi/ppapi_internal.gyp:ppapi_shared',
+        '<(DEPTH)/third_party/google_toolbox_for_mac/google_toolbox_for_mac.gyp:google_toolbox_for_mac',
+        '<(DEPTH)/third_party/libyuv/libyuv.gyp:libyuv',
+        '<(DEPTH)/third_party/webrtc/modules/modules.gyp:desktop_capture',
       ],
       'sources': [
         'empty.cc',
