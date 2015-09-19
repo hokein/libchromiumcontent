@@ -28,6 +28,7 @@
       # will not build.
       'type': 'shared_library',
       'dependencies': [
+        'libchromiumcontent_pak',
         '<(DEPTH)/base/base.gyp:base_prefs',
         '<(DEPTH)/components/components.gyp:devtools_discovery',
         '<(DEPTH)/components/components.gyp:devtools_http_handler',
@@ -49,6 +50,27 @@
             '<(DEPTH)/pdf/pdf.gyp:pdf',
           ],
         }],
+      ],
+    },
+    {
+      'target_name': 'libchromiumcontent_pak',
+      'type': 'none',
+      'dependencies': [
+        '<(DEPTH)/chrome/chrome_resources.gyp:chrome_strings_map',
+        '<(DEPTH)/content/content_shell_and_tests.gyp:content_shell_pak',
+      ],
+      'actions': [
+        {
+          'action_name': 'repack_content_shell_pack',
+          'variables': {
+            'pak_inputs': [
+              '<(SHARED_INTERMEDIATE_DIR)/chrome/generated_resources_en-US.pak',
+              '<(PRODUCT_DIR)/content_shell.pak',
+            ],
+            'pak_output': '<(PRODUCT_DIR)/libchromiumcontent.pak',
+          },
+          'includes': [ '../build/repack_action.gypi' ],
+        },
       ],
     },
   ],
